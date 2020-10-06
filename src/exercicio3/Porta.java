@@ -7,6 +7,11 @@ public class Porta {
 	private double dimensaoY;
 	private double dimensaoZ;
 	
+	
+	public boolean isAberta() {
+		return aberta;
+	}
+	
 	public void setAberta(boolean aberta) {
 		this.aberta = aberta;
 	}

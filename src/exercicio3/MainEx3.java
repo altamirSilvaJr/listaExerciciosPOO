@@ -53,7 +53,7 @@ public class MainEx3 {
 				break;
 			}
 		}
-
+		sc.close();
 	}
 
 }
