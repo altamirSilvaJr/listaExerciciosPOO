@@ -1,8 +1,10 @@
 package exercicio1;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Funcionario {
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	
 	public int idFunc;
 	public String nomeFunc;
@@ -78,7 +80,7 @@ public class Funcionario {
 	}
 	
 	public void demiteFuncionario() {
-		if(!ativo) {
+		if(ativo) {
 		ativo = false;
 		}else {
 			System.out.println("Funcionário inativo no sistema.");
@@ -86,13 +88,16 @@ public class Funcionario {
 	}
 	
 	public void imprimir() {
+		System.out.println("=========xxx==========");
 		System.out.println("ID Funcionário: " + idFunc);
 		System.out.println("Nome do Funcionário: " + nomeFunc);
 		System.out.println("Departamento: " + departamento);
-		System.out.println("Data de admissão: " + dataContratacao);
+		String dataFormatada = dataContratacao.format(formatter);
+		System.out.println("Data de admissão: " + dataFormatada);
 		System.out.println("Salário: R$ " + salario);
 		System.out.println("Documento: " + documento);
 		System.out.println("Situação: " + ativo);
+		System.out.println("=========xxx==========");
 		
 	}
 
