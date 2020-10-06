@@ -43,7 +43,7 @@ public class MainEx1 {
 		func.demiteFuncionario();
 		
 		func.imprimir();
-
+		sc.close();
 	}
 
 }
